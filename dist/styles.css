@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+.boro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Lora", serif;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 90%;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    width: 100%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.field {
+    width: 48%;
+    display: flex;
+    flex-direction: column;
+}
+
+.field label {
+    margin-bottom: 5px;
+    color: #555;
+    font-weight: bold;
+}
+
+input, select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.field-center {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+button.calculate-btn {
+    width: 100%;
+    padding: 10px;
+    background: #28042f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+button.calculate-btn:hover {
+    background: #0056b3;
+}
+
+.result {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+.bmi-result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.underweight {
+    color: #1e90ff;
+    background-color: #e0f7ff;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.normal {
+    color: #28a745;
+    background-color: #e8f8e8;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.overweight {
+    color: #ff9f00;
+    background-color: #fff3e0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.obese {
+    color: #e74c3c;
+    background-color: #fde0e0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bmi-result h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <title>BMR Calculator</title>
+</head>
+<body>
+    <div class="boro">
+        <div class="container">
+            <h1>BMR Calculator</h1>
+            <form method="POST" action="/">
+                <div class="row">
+                    <div class="field">
+                        <label for="weight">Weight (kg):</label>
+                        <input type="number" step="0.1" name="weight" id="weight" required>
+                    </div>
+                    <div class="field">
+                        <label for="height">Height (cm):</label>
+                        <input type="number" step="0.1" name="height" id="height" required>
+                    </div>
+                </div>
+    
+                <div class="row">
+                    <div class="field">
+                        <label for="age">Age:</label>
+                        <input type="number" name="age" id="age" required>
+                    </div>
+                    <div class="field">
+                        <label for="gender">Gender:</label>
+                        <select name="gender" id="gender" required>
+                            <option value="1">Male</option>
+                            <option value="2">Female</option>
+                        </select>
+                    </div>
+                </div>
+    
+                <div class="field-center">
+                    <label for="activity">Activity Level:</label>
+                    <select name="activity" id="activity" required>
+                        <option value="1">Sedentary</option>
+                        <option value="2">Lightly Active</option>
+                        <option value="3">Moderately Active</option>
+                        <option value="4">Very Active</option>
+                        <option value="5">Super Active</option>
+                    </select>
+                </div>
+    
+                <button type="submit" class="calculate-btn">Calculate</button>
+            </form>
+    
+            <!-- Display the results -->
+            <p class="result">
+                {% if result %}
+                    {{ result }}
+                {% endif %}
+            </p>
+            
+            <div class="bmi-result {% if bmi_class %}{{ bmi_class }}{% endif %}">
+                <h3>BMI Classification</h3>
+                <p><strong>{{ bmi_result }}</strong></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
